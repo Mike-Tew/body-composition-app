@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tauri App</title>
-    <link rel="icon" type="image/x-icon" href="/assets/icon.ico">
-    <script src="/calculate.js" defer></script>
-  </head>
-
-  <body>
-    <div class="container">
-      <h2 id="title" class="row">Body Mass Index (BMI)</h2>
-      <div class="row">
-        <div class="input-fields">
-          <label for="weight">Weight</label><br>
-          <input id="weight" type="text" oninput="calculate()" /><span>lb</span><br>
-          <label for="feet">Height</label><br>
-          <input id="feet" type="text" oninput="calculate()"><span>ft</span>
-          <input id="inches" type="text" oninput="calculate()"><span>in</span>
-        </div>
-        <div class="results">
-          <span id="bmi">--.-</span>
-          <span id="bmi-text">BMI</span>
-        </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/src/index.css">
+  <script src="/src/index.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h2 class="title">Body Fat Calculator</h2>
+    <div class="row">
+      <div id="input-el" class="container">
+        <label for="age">AGE</label>
+        <input id="age" type="text" oninput="calculateBodyFat()">
+        <label for="weight">WEIGHT</label>
+        <input id="weight" type="text" oninput="calculateBodyFat()">
+        <label for="chest-skinfold">CHEST SKINFOLD</label>
+        <input id="chest-skinfold" type="text" oninput="calculateBodyFat()">
+        <label for="ab-skinfold">ABDOMINAL SKINFOLD</label>
+        <input id="ab-skinfold" type="text" oninput="calculateBodyFat()">
+        <label for="thigh-skinfold">THIGH SKINFOLD</label>
+        <input id="thigh-skinfold" type="text" oninput="calculateBodyFat()">
+      </div>
+      <div id="results" class="container">
+        <h2>RESULTS</h2>
+        <h5>Body Fat</h5>
+        <span>10.4%</span>
+        <h5>Lean Mass</h5>
+        <span>120 lb</span>
+        <h5>Fat Mass</h5>
+        <span>12 lb</span>
       </div>
     </div>
-  </body>
+  </div>
+</body>
 </html>
