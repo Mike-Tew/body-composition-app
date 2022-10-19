@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tauri App</title>
+    <link rel="icon" type="image/x-icon" href="/assets/icon.ico">
+    <script src="/calculate.js" defer></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h2 id="title" class="row">Body Mass Index (BMI)</h2>
+      <div class="row">
+        <div class="input-fields">
+          <label for="weight">Weight</label><br>
+          <input id="weight" type="text" oninput="calculate()" /><span>lb</span><br>
+          <label for="feet">Height</label><br>
+          <input id="feet" type="text" oninput="calculate()"><span>ft</span>
+          <input id="inches" type="text" oninput="calculate()"><span>in</span>
+        </div>
+        <div class="results">
+          <span id="bmi">--.-</span>
+          <span id="bmi-text">BMI</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
