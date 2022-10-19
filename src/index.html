@@ -1,39 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="/src/index.css">
-  <script src="/src/index.js" defer></script>
-</head>
-<body>
-  <div class="container">
-    <h2 class="title">Body Fat Calculator</h2>
-    <div class="row">
-      <div id="input-el" class="container">
-        <label for="age">AGE</label>
-        <input id="age" type="text" oninput="calculateBodyFat()">
-        <label for="weight">WEIGHT</label>
-        <input id="weight" type="text" oninput="calculateBodyFat()">
-        <label for="chest-skinfold">CHEST SKINFOLD</label>
-        <input id="chest-skinfold" type="text" oninput="calculateBodyFat()">
-        <label for="ab-skinfold">ABDOMINAL SKINFOLD</label>
-        <input id="ab-skinfold" type="text" oninput="calculateBodyFat()">
-        <label for="thigh-skinfold">THIGH SKINFOLD</label>
-        <input id="thigh-skinfold" type="text" oninput="calculateBodyFat()">
-      </div>
-      <div id="results" class="container">
-        <h2>RESULTS</h2>
-        <h5>Body Fat</h5>
-        <span>10.4%</span>
-        <h5>Lean Mass</h5>
-        <span>120 lb</span>
-        <h5>Fat Mass</h5>
-        <span>12 lb</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/index.css" />
+    <script src="/src/index.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="title">Body Fat Calculator</h2>
+      <div class="row">
+        <div id="input-el" class="container">
+          <label for="age">AGE</label>
+          <input
+            id="age"
+            type="text"
+            placeholder="mm"
+            oninput="calculateBodyFat()"
+          />
+          <label for="weight">WEIGHT</label>
+          <input
+            id="weight"
+            type="text"
+            placeholder="mm"
+            oninput="calculateBodyFat()"
+          />
+          <label for="chest-skinfold">CHEST SKINFOLD</label>
+          <input
+            id="chest-skinfold"
+            type="text"
+            placeholder="mm"
+            oninput="calculateBodyFat()"
+          />
+          <label for="ab-skinfold">ABDOMINAL SKINFOLD</label>
+          <input
+            id="ab-skinfold"
+            type="text"
+            placeholder="mm"
+            oninput="calculateBodyFat()"
+          />
+          <label for="thigh-skinfold">THIGH SKINFOLD</label>
+          <input
+            id="thigh-skinfold"
+            type="text"
+            placeholder="mm"
+            oninput="calculateBodyFat()"
+          />
+        </div>
+        <div id="results" class="container">
+          <h2>RESULTS</h2>
+          <h5>Body Fat</h5>
+          <span id="fat-percentage">10.4%</span>
+          <h5>Lean Mass</h5>
+          <span id="fat-mass">120 lb</span>
+          <h5>Fat Mass</h5>
+          <span id="lean-mass">12 lb</span>
+        </div>
       </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
