@@ -4,8 +4,15 @@ const calculate = () => {
   const inches = +document.getElementById('inches').value
   const height = feet * 12 + inches
   const bmi = (weight * 703) / Math.pow(height, 2)
-  document.getElementById('bmi').innerHTML = bmi.toFixed(1)
   const bmiText = document.getElementById('bmi-text')
+
+  if (bmi == "Infinity" || weight == 0) {
+    document.getElementById('bmi').innerHTML = '--.-'
+    bmiText.innerHTML = "BMI"
+    return
+  }
+
+  document.getElementById('bmi').innerHTML = bmi.toFixed(1)
 
   switch (true) {
     case (bmi < 16):

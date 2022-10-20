@@ -12,7 +12,15 @@
 
 .row {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+}
+
+a {
+  width: 50%;
+  line-height: 3rem;
+  text-decoration: none;
+  color: white;
+  background-color: #343a40;
 }
 
 #title {
